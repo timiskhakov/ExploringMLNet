@@ -19,8 +19,7 @@ namespace ExploringMLNet
             var sample = new Input
             {
                 First = 123,
-                Second = 300,
-                Result = 0
+                Second = 300
             };
             var output = Predict(context, model, sample);
             
