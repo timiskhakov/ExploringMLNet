@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploringMLNet.Sums", "ExploringMLNet.Sums\ExploringMLNet.Sums.csproj", "{75935CA0-E6F5-41C9-8EA3-E7B7BD3CA7F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploringMLNet.Expression", "ExploringMLNet.Expression\ExploringMLNet.Expression.csproj", "{75935CA0-E6F5-41C9-8EA3-E7B7BD3CA7F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploringMLNet.RottenTomatoes", "ExploringMLNet.RottenTomatoes\ExploringMLNet.RottenTomatoes.csproj", "{347C6FAC-24B4-400B-BA2C-85BB6E7F2174}"
 EndProject
