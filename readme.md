@@ -1,33 +1,27 @@
 # ExploringMLNet
 
-A small project to explore [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) library. This repo is a part of my Futurice's DotNeat talk on ML.NET.
+A set of small projects to explore [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) library. This repo is a part of my Futurice's DotNeat talk on ML.NET.
 
-## Setup
+## Problem 1: Regression
+
+Say, we have a set of numbers that participates in some expression. We don't know the actual formula of that expression, but we do know its final result. Based on a provided sample set, we are going to predict its result.
+
+To run the program and see some predictions run the following commands:
 
 ```bash
-git clone [this repo]
-cd ./ExploringMLNet.Sums
+cd ./ExploringMLNet.Expression
 dotnet restore
-```
-
-## Usage
-
-1. Setup a sample in the `main` method :
-```csharp
-var sample = new Input
-{
-    First = 123,
-    Second = 300
-};
-```
-
-2. Run the app:
-
-```bash
 dotnet run
 ```
 
-3. The app is going to create a model and predict a sum of the sample's `First` and `Second`:
-```
-Prediction for 123 + 300: 422.5616
+## Problem 2: Binary Classification
+
+In this scenario we have a lot of user reviews from [Rotten Tomatoes](https://www.rottentomatoes.com). Each review has either a positive or negative rating. What we want is to determine a rating based on a provided text.
+
+To run the program and see some predictions run the following commands:
+
+```bash
+cd ./ExploringMLNet.RottenTomatoes
+dotnet restore
+dotnet run
 ```
