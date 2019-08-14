@@ -35,7 +35,7 @@ namespace ExploringMLNet.RottenTomatoes
                 var output = Predict(context, model, review);
                 var prediction = output.Prediction ? "positive" : "negative"; 
                 
-                Console.WriteLine($"Prediction for '{review.Text}': {prediction}");
+                Console.WriteLine($"Review: '{review.Text}'\nPrediction: {prediction}\n");
             }
         }
 
