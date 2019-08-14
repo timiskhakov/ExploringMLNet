@@ -21,13 +21,22 @@ namespace ExploringMLNet.RottenTomatoes
             var model = Train(context, trainSet);
             Evaluate(context, model, testSet);
             
-            var sample = new Review    
+            var reviews = new[]
             {
-                Text = "it's fun"
+                new Review {Text = "it's fun"},
+                new Review {Text = "That was a really bad movie"},
+                new Review {Text = "This movie was supposed to change my life, but meh..."},
+                new Review {Text = "An entertaining adventure"},
+                new Review {Text = "Probably ok-ish, but I'm not 100% sure.."}
             };
-            var output = Predict(context, model, sample);
-            
-            Console.WriteLine(output.Prediction);
+
+            foreach (var review in reviews)
+            {
+                var output = Predict(context, model, review);
+                var prediction = output.Prediction ? "positive" : "negative"; 
+                
+                Console.WriteLine($"Prediction for '{review.Text}': {prediction}");
+            }
         }
 
         private static ITransformer Train(MLContext context, IDataView trainSet)
@@ -42,10 +51,7 @@ namespace ExploringMLNet.RottenTomatoes
         private static void Evaluate(MLContext context, ITransformer model, IDataView testSet)
         {
             var predictions = model.Transform(testSet);
-            var metrics = context.BinaryClassification.Evaluate(predictions);
-            
-            Console.WriteLine("Evaluation results:");
-            Console.WriteLine($"Score: {metrics.F1Score:0.##}");
+            context.BinaryClassification.Evaluate(predictions);
         }
 
         private static ReviewPrediction Predict(MLContext context, ITransformer model, Review sample)
