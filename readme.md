@@ -15,7 +15,7 @@ A,B,C,D,E,Result
 ...
 ```
 
-The idea of this scenario is to train a model using regression, evaluate it, and guess a result based on a provided sample set.
+The idea of this scenario is to train a model using this data, evaluate it, and guess a result based on a provided sample set.
 
 Keep in mind that the machine doesn't know the actual formula of that expression. (Although if we do some math or check [`CalculateExpression`](https://github.com/timiskhakov/ExploringMLNet/blob/master/ExploringMLNet.Expression/DataGenerator.cs#L25) method we would know that the expression is `(a + b)ˆ2 + (c + d) * e`.)
 
@@ -29,7 +29,7 @@ dotnet run
 
 ## Problem 2: Binary Classification
 
-In this scenario we have a lot of user reviews from [Rotten Tomatoes](https://www.rottentomatoes.com). Each review has either a positive or negative rating. Then again, we build and evaluate a model, but this time round using binary classification. What we want though is to determine a rating based on a provided text.
+In this scenario we have a lot of user reviews from [Rotten Tomatoes](https://www.rottentomatoes.com). Each review has either a positive or negative rating. Then again, we build and evaluate a model, but this time round we need binary classification for that. What we want though is to determine a rating based on a provided text.
 
 To run the program and see sample based predictions run the following commands:
 
