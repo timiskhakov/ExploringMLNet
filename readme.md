@@ -4,7 +4,20 @@ A set of small projects to explore [ML.NET](https://dotnet.microsoft.com/apps/ma
 
 ## Problem 1: Regression
 
-Say, we have a set of numbers that participates in some expression. We don't know the actual formula of that expression, but we do know its final result. Based on a provided sample set, we are going to predict its result.
+Say, we have a huge list of sets of 5 numbers that participate in some expression and its result:
+
+```
+A,B,C,D,E,Result
+25,76,60,75,34,14791
+25,86,71,98,17,15194
+21,29,20,15,49,4215
+84,50,40,30,7,18446
+...
+```
+
+Keep in mind that we don't know the actual formula of that expression. (Although if we do some math or check [`CalculateExpression`](https://github.com/timiskhakov/ExploringMLNet/blob/master/ExploringMLNet.Expression/DataGenerator.cs#L25) method we would know that the expression is `(a + b)ˆ2 + (c + d) * e`.)
+
+The idea of this scenario is to guess a result based on a provided sample set using regression.
 
 To run the program and see sample based predictions run the following commands:
 
@@ -16,7 +29,7 @@ dotnet run
 
 ## Problem 2: Binary Classification
 
-In this scenario we have a lot of user reviews from [Rotten Tomatoes](https://www.rottentomatoes.com). Each review has either a positive or negative rating. What we want is to determine a rating based on a provided text.
+In this scenario we have a lot of user reviews from [Rotten Tomatoes](https://www.rottentomatoes.com). Each review has either a positive or negative rating. What we want is to determine a rating based on a provided text using binary classification.
 
 To run the program and see sample based predictions run the following commands:
 
