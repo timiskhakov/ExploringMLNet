@@ -32,7 +32,7 @@ namespace ExploringMLNet
                 var output = Predict(context, model, input);
 
                 var expression = $"({input.A} + {input.B})ˆ2 + ({input.C} + {input.D}) * {input.E}";
-                var prediction = output.Result;
+                var prediction = (int) output.Result;
                 var actual = DataGenerator.CalculateExpression(input);
                 
                 Console.WriteLine($"{expression}\nprediction: {prediction}\nactual: {actual}\n");
