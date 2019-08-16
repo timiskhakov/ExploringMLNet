@@ -15,9 +15,9 @@ A,B,C,D,E,Result
 ...
 ```
 
-Keep in mind that the machine doesn't know the actual formula of that expression. (Although if we do some math or check [`CalculateExpression`](https://github.com/timiskhakov/ExploringMLNet/blob/master/ExploringMLNet.Expression/DataGenerator.cs#L25) method we would know that the expression is `(a + b)ˆ2 + (c + d) * e`.)
+The idea of this scenario is to train a model using regression, evaluate it, and guess a result based on a provided sample set.
 
-The idea of this scenario is to build a model using regression, evaluate it, and guess a result based on a provided sample set.
+Keep in mind that the machine doesn't know the actual formula of that expression. (Although if we do some math or check [`CalculateExpression`](https://github.com/timiskhakov/ExploringMLNet/blob/master/ExploringMLNet.Expression/DataGenerator.cs#L25) method we would know that the expression is `(a + b)ˆ2 + (c + d) * e`.)
 
 To run the program and see sample based predictions run the following commands:
 
