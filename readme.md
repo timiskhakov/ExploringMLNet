@@ -15,9 +15,7 @@ A,B,C,D,E,Result
 ...
 ```
 
-For example, feeding numbers like `19, 24, 64, 12, 10` should give us something close to `2609`.
-
-The idea of this scenario is to train a model using this data, evaluate it, and guess a result based on a provided sample set.
+The idea of this scenario is to train a model using this data, evaluate it, and guess a result based on a provided sample set. For example, feeding numbers like `19, 24, 64, 12, 10` should give us something close to `2609`.
 
 Keep in mind that the machine doesn't know the actual formula of that expression. (Although if we do some math or check [`CalculateExpression`](https://github.com/timiskhakov/ExploringMLNet/blob/master/ExploringMLNet.Expression/DataGenerator.cs#L25) method we would know that the expression is `(a + b)ˆ2 + (c + d) * e`.)
 
