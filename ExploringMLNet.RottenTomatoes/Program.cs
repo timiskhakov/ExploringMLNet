@@ -54,11 +54,11 @@ namespace ExploringMLNet.RottenTomatoes
             context.BinaryClassification.Evaluate(predictions);
         }
 
-        private static ReviewPrediction Predict(MLContext context, ITransformer model, Review sample)
+        private static ReviewPrediction Predict(MLContext context, ITransformer model, Review review)
         {
             var predictionEngine = context.Model.CreatePredictionEngine<Review, ReviewPrediction>(model);
             
-            return predictionEngine.Predict(sample);
+            return predictionEngine.Predict(review);
         }
     }
 }
